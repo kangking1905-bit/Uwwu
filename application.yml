@@ -1,7 +1,19 @@
-server:
-  port: 10000
-  address: 0.0.0.0
-
 lavalink:
   server:
     password: "youshallnotpass"
+    sources:
+      youtube: false
+
+  plugins:
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.18.0"
+      snapshot: false
+
+plugins:
+  youtube:
+    enabled: true
+    allowSearch: true
+    allowDirectVideoIds: true
+    allowDirectPlaylistIds: true
+    clients:
+      - MUSIC
+      - WEB
